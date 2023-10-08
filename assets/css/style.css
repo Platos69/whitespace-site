@@ -10,123 +10,521 @@
     outline: none; /* Altera o contorno */
     font-family: 'Inter', sans-serif; /* Define qual fonte será aplicada */
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+
 /* /CONFIGURAÇÕES INICIAIS */
 
-/* Natives */
-body {
-    background-color: #f1f6fc31; /* Altera a cor do fundo */
-}
-
-section, footer {
-    padding: 54px 0;
-}
-
-h3 {
-    font-size: 50px; /* Altera o tamanho da fonte */
-}
- 
-p {
-    color: #0000009c;
-}
-
-header {
-    background-position: center; /* Configura a posição da imagem para que ela fique no centro */
-    background-size: cover; /* Configura a imagem para que ela ocupe todo o campo */
-    background-attachment: fixed; /* Configura a imagem para que ela ative um efeito "Parallax" */
-    background-repeat: no-repeat; /* Configura a imagem para que ela não fique se repetindo para preencher todo o espaço */
-}
-
-nav {
-    display: flex; /* Permite deixar os elementos do site um do lado do outro */
-    align-items: center; /* Configura para que os elementos fiquem centralizados */ 
-    justify-content: space-between; /* Adiciona um espaço igualitário entre os elementos */
-    padding: 30px;
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-}
-
-nav ul a {
-    color: white; /* Altera a cor do texto */
-    margin: 0 25px; 
-    text-transform: uppercase; /* Altera a formatação do texto para maiúsculo */
-    font-size: 14px; /* Altera o tamanho da fonte */
-    display: block; /* Renderiza o texto como um bloco*/
-}
-
-nav ul a:not(.btn)::after { /* After cria um outro elemento após a tag */ /* Esse not() permite fazer uma restrição de onde a animação ocorrerá*/
-    content: "";
-    background: #3580db;
-    border-radius: 10px;
-    height: 3px;
-    width: 0%;
-    display: block;
-    margin: auto 0;
-    transition: 0.3s;
-}
-
-nav ul a:hover::after { 
-    width: 100%;
-}
-
-/* /Natives */
-
 /* Classes */
 
-.container {
-    max-width: 1400px; /* Define a altura máxima de determinado elemento */
-    margin: 0 auto;
-    padding: 0 5%;
-}
+    /* Navbar */
 
-.btn {
-    background-color: #4f9cf9;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 10px; /* Altera a curvatura da borda */
-    cursor: point; /* Altera o estilo do mouse para apontando */
-    display: inline-block; /* Alinha todos os elementos com a mesma classe na mesma linha */
-    transition: 0.5s; /* Aplica um tempo à determinada animação */
-} 
+    body {
+        background-color: #f1f6fc31; /* Altera a cor do fundo */
+    }
 
-.btn:hover { /* Essa tag hover configura uma animação de transição */
-    background-color: #3580db;
-}
+    section, footer {
+        padding: 54px 0;
+    }
 
-.btn.animate-btn {
-    animation: animate-outline 1s ease-out infinite;
-}
+    h3 {
+        font-size: 50px; /* Altera o tamanho da fonte */
+    }
+    
+    p {
+        color: #0000009c;
+    }
 
-.banner {
-    display: flex;
-    justify-content: center;
-}
+    header {
+        background-position: center; /* Configura a posição da imagem para que ela fique no centro */
+        background-size: cover; /* Configura a imagem para que ela ocupe todo o campo */
+        background-attachment: fixed; /* Configura a imagem para que ela ative um efeito "Parallax" */
+        background-repeat: no-repeat; /* Configura a imagem para que ela não fique se repetindo para preencher todo o espaço */
+    }
 
-.banner .banner-text {
-    margin: 150px;
-    text-align: center;
-    padding: 0 90px;
-}
+    nav {
+        display: flex; /* Permite deixar os elementos do site um do lado do outro */
+        align-items: center; /* Configura para que os elementos fiquem centralizados */ 
+        justify-content: space-between; /* Adiciona um espaço igualitário entre os elementos */
+        padding: 30px;
+    }
 
-.banner .banner-text h1 {
-    font-size: 96px;
-    color: white;
-}
+    nav ul {
+        display: flex;
+        align-items: center;
+    }
 
-.banner .banner-text p {
-    font-size: 20px;
-    color: #ffffffb7;
-    font-style: lighter;
-    margin: 18px 0;
-}
+    nav ul a {
+        color: white; /* Altera a cor do texto */
+        font-weight: bold; /* Altera a grossura da fonte */
+        margin: 0 25px; 
+        text-transform: uppercase; /* Altera a formatação do texto para maiúsculo */
+        font-size: 14px; /* Altera o tamanho da fonte */
+        display: block; /* Renderiza o texto como um bloco*/
+    }
 
-/* Classes */
+    nav ul a:not(.btn)::after { /* After cria um outro elemento após a tag */ /* Esse not() permite fazer uma restrição de onde a animação ocorrerá*/
+        content: ""; /* Serve para que apenas o sublinhado apareça */
+        background: #3580db;
+        border-radius: 10px;
+        height: 4px; /* Altera a altura do elemento */
+        width: 0%; /* Altera a largura do elemento */
+        display: block;
+        margin: auto 0;
+        transition: 0.3s;
+    }
+
+    nav ul a:hover::after { /*Aqui é aplicado um comando para que seja criado um elemento novo e que ele vai aparecer após*/
+        width: 100%;
+    }
+
+    /* /Navbar */
+
+    /* Menu mobile */
+
+    nav .menu-icon {
+        cursor: pointer;
+        font-size: 25px;
+        color: white;
+        display: none;
+    }
+
+    nav .close-icon {
+        cursor: pointer;
+        font-size: 30px;
+        color: white;
+        display: none;
+    }
+
+    /* /Menu mobile */
+
+
+    /* Home */
+        /* Header */
+        .container {
+            max-width: 1400px; /* Define a altura máxima de determinado elemento */
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .btn {
+            background-color: #4f9cf9;
+            color: white;
+            font-weight: bold;
+            padding: 15px 20px;
+            border-radius: 10px; /* Altera a curvatura da borda */
+            cursor: point; /* Altera o estilo do mouse para apontando */
+            display: inline-block; /* Alinha todos os elementos com a mesma classe na mesma linha */
+            transition: 0.5s; /* Aplica um tempo à determinada animação */
+        } 
+
+        .btn:hover { /* Essa tag hover configura uma animação de transição */
+            background-color: #3580db;
+            transform: scale(1.1); /* Propriedade que transforma a escala do elemento */
+        }
+
+        .btn.animate-btn {
+            animation: animate-outline 1s ease-out infinite;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: center;
+        }
+
+        .banner .banner-text {
+            margin: 150px;
+            text-align: center;
+            padding: 0 90px;
+        }
+
+        .banner .banner-text h1 {
+            font-size: 96px;
+            color: white;
+        }
+
+        .banner .banner-text p {
+            font-size: 20px;
+            color: #ffffffb7;
+            font-style: lighter; /* Altera o estilo da fonte */
+            margin: 18px 0;
+        }
+        /* /Header */
+
+        /* Faça mais */
+        .faca-mais .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .faca-mais .faca-mais-text{
+            width: 50%; 
+            padding: 0 40px;
+        }
+
+        .faca-mais .faca-mais-text h3 {
+            font-size: 56px;
+        }
+
+        .faca-mais .faca-mais-text p {
+            margin: 10px 0 15px 0;
+        }
+
+        .faca-mais .faca-mais-img {
+            width: 50%;
+        }
+
+        .faca-mais .faca-mais-img img{
+            width: 100%;
+        }
+
+        /* /Faça mais */
+
+        /* Cards */
+
+        .depoimentos h3 {
+            text-align: center; /* Altera a posição do texto */
+        }
+
+        .depoimentos p {
+            margin-bottom: 20px; /* Altera a margem de baixo do elemento */
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cards .card-item {
+            background-color: #d3e6fd;
+            margin: 15px;
+            border-radius: 14px;
+            text-align: center;
+            width: 350px;
+            transition: 0.4s;
+        }
+
+        .cards .card-item img {
+            border-radius: 100%;
+            width: 80px;
+            display: block;
+            margin: 20px auto;
+            border: 3px solid #4f9cf9;
+        }
+
+        .cards .card-item .nome-user {
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 15px;
+
+        }
+
+        .cards .card-item .depoimento-user {
+            font-size: 15px;
+            padding: 0 15px;
+        }
+
+        .cards .card-item .estrelas {
+            margin: 15px 0;
+            border-top: 2px solid #4f9bf9a1;
+            padding-top: 15px;
+        }
+
+        .cards .card-item .estrelas i{
+            color: #4f9cf9;
+            font-size: 20px;
+        }
+
+        .cards .card-item:hover {
+            background-color: #4f9cf9;
+            margin-top: -1px;
+            color: white;
+            transition: 0.5s;
+        }
+        
+        .cards .card-item:hover .estrelas,
+        .cards .card-item:hover .nome-user,
+        .cards .card-item:hover .depoimento-user {
+            color: white;
+            border: none;
+            transition: 0.5s;
+        }
+
+        .cards .card-item:hover img {
+            border-color: white;
+            transition: 0.5s;
+        }
+        
+        .cards .card-item:hover i{
+            color: white;
+            padding-bottom: 20px;
+            transition: 0.5s;
+        }
+
+        /* /Cards */
+
+        /* Clientes */
+        .nossos-clientes h3,
+        .nossos-clientes p {
+            text-align: center;
+        }
+
+        .nossos-clientes .container div{
+            margin-top: 15px;   
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .nossos-clientes .container div img {
+            width: 100%;
+            height: 100%;
+            transition: transform .5s ease;
+        }
+
+        .nossos-clientes .container div img:hover {
+            transform: scale(1.2);
+        }
+
+        /* /Clientes */
+
+    /* /Home */    
+
+    /* Sobre */
+        
+        .sobre .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sobre .sobre-text {
+            width: 50%; 
+            padding-right: 40px;
+        }
+        
+        .sobre .sobre-text p {
+           margin: 18px 0;
+           color: #000000a6;
+        }
+
+        .sobre .sobre-img {
+            width: 50%;
+        }
+
+        .sobre .sobre-img img {
+            border-radius: 10px;
+            width: 100%;
+        }
+
+    /* /Sobre */
+
+    /* Serviços */
+
+        /* Cards */
+        .servicos .container > p, /* Aqui é possível notar um seletor ">" ele seleciona o elemento em especifico */
+        .servicos h3 {
+            text-align: center;
+        }
+
+        .servicos .rows-cards {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .servicos .row-card-item {
+            background: #d3e6fd;
+            width: 350px;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            transition: 0.5s;
+            transition: transform .5s ease;
+        }
+
+        .servicos .row-card-item img{
+            border: 2px solid #4f9cf9;
+            background-color: #4f9cf9;
+            border-radius: 14px;
+            width: 70px;
+            padding: 9px;
+            transition: 0.05s;
+        }
+
+        .servicos .row-card-item:hover p{
+            color: white;
+            transition: 0.5s;
+        }
+
+        .servicos .row-card-item:hover img {
+            border-color: white;
+            transition: 0.4s;
+        }
+
+        .servicos .row-card-item:hover {
+            background-color: #4f9cf9;
+            transform: scale(1.1);
+        }
+
+        /* /Cards */
+
+        /* Dados */
+        
+        .dados {
+            background-color: #d3e6fd;
+        }
+
+        .dados .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .dados .dados-item {
+            text-align: center;
+            margin: 15px;
+            color: #000000be;
+        }
+
+        .dados .dados-item img {
+            background-color: #4f9cf9;
+            border-radius: 14px;
+            padding: 10px;
+            margin-bottom: 15px;
+            width: 80px;
+        }
+
+        .dados .dados-item p {
+            font-size: 18px;
+            white-space: pre-line;
+        }
+
+        .dados .dados-item p strong {
+            font-size: 28px;
+        }
+
+        /* /Dados */
+
+    /* /Serviços */
+
+    /* Contato */
+
+    .contato-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+
+    .contato-info .left-side {
+        width: 50%;
+        padding: 30px;
+        background-color: #4f9cf9;
+        border-radius: 14px;
+        margin-right: 50px;
+        height: fit-content;
+    }
+
+    .contato-info .left-side div {
+        display: flex;
+        align-items: center;
+    }
+
+    .contato-info .left-side div i {
+        font-size: 18px;
+        padding: 5px;
+        margin-right: 20px;
+        color: white;
+    }
+
+    .contato-info .left-side div p {
+        font-size: 14px;
+        color: white;
+    }
+
+    .contato-info .right-side {
+        width: 50%;
+    }
+
+    .contato-info .right-side input {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        height: 47px;
+        padding: 15px;
+        border-radius: 9px;
+        transition: 0.3s;
+        border: 1px solid #f1f1f1;
+        color: #212121;
+        font-weight: lighter;
+    }
+
+    .contato-info .right-side textarea {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        height: 150px;
+        padding: 15px;
+        border-radius: 9px;
+        transition: 0.3s;
+        border: 1px solid #f1f1f1;
+        color: #212121;
+        font-weight: lighter;
+        resize: none;
+    }
+
+    .contato-info .right-side textarea:focus,
+    .contato-info .right-side input:focus {
+        border-color: #4f9cf9;
+    }
+
+    .contato-info .right-side button {
+        border: none;
+        cursor: pointer;
+    }
+
+    /* /Contato */
+
+        /* Footer */
+        
+        .footer {
+            background-color: #4f9cf9;
+            text-align: center;
+        }
+
+        .footer i {
+            color: #4f9cf9;
+            font-size: 19px;
+            background-color: white;
+            padding: 10px;
+            margin: 3px;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+
+        .footer i:hover {
+            transform: scale(1.15);
+        }
+
+        .footer p {
+            margin-top: 10px;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        /* /Footer */ 
+
+    /* /Classes */
 
 /* Keyframes */
 
-@keyframes animate-outline {
+@keyframes animate-outline { /* anima através de um (de / para)*/
     from {
         outline: 0px solid #4f9bf98a;
     }
@@ -136,3 +534,114 @@ nav ul a:hover::after {
 }   
 
 /* /Keyframes */
+
+/* Media screen */
+
+@media(max-width: 830px) { /* Permite que seja possível adiciona coisas de acordo com o tamanho de tela */
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav .close-icon {
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 28px;
+    }
+
+    .ul {
+        clip-path: circle(0.0% at 100% 0); /* Cria formas geométricas*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #164b88;
+        width: 100%;
+        height: 100%;
+        flex-direction: column; /* Alinha os elementos em colunas */
+        justify-content: center;
+        transition: 0.7s;
+    }
+
+    .ul a{
+        margin: 10px 0;
+        font: 16px;
+    }
+
+    .ul.open {
+        clip-path: circle(141.2% at 100% 0);
+    }
+
+    /* Responsividade Home*/
+    .faca-mais .faca-mais-text {
+        margin-top: 10px;
+        padding: 0 20px;
+        order: 1;
+    }
+
+    .faca-mais .container {
+        flex-direction: column;
+    }
+
+    .faca-mais .faca-mais-text h3{
+        font-size: 48px;
+    }
+
+    .faca-mais .faca-mais-text,
+    .faca-mais .faca-mais-img {
+        width: 100%;
+    }
+
+    .banner .banner-text {
+        padding: 0;
+        margin: 80px;
+    }
+
+    .banner .banner-text h1 {
+        font-size: 60px;
+    }
+
+    .banner .banner-text p {
+        font-size: 15px;
+    }
+
+    .cards .card-item {
+        width: 100%;
+    }
+    
+    /* /Responsividade Home*/
+
+    /* Responsividade Sobre*/
+    .sobre .container {
+        flex-direction: column-reverse;
+    }
+
+    .sobre .sobre-img,
+    .sobre .sobre-text {
+        width: 100%;
+    }
+
+    .sobre .sobre-text {
+        margin: 40px;
+    }
+
+    /* /Responsividade Sobre*/
+
+    /* Responsividade Contato*/
+
+    .contato .contato-info {
+        flex-direction: column-reverse;
+    }
+
+    .contato-info .right-side,
+    .contato-info .left-side {
+        width: 100%;
+    }
+
+    .contato-info .right-side {
+        margin-bottom: 30px;
+    }    
+
+    /* /Responsividade Contato*/
+}
+
+/* /Media screen */

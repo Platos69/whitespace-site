@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- /Font Awesome -->
+
+    <title>Serviços - Page</title>
+
+    <!-- Css's -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- /Css's -->
+</head>
+
+<body>
+    <!-- header -->
+    <header style="background-image: url('../images/background-servicos.jpg'); border-radius: 0px 0px 30px 30px;">
+        <!-- container -->
+        <div class="container">
+            <nav> <!-- Tag usada para direcionar para outras páginas -->
+                <a href="./index.html">
+                    <img src="../images/logo.png" alt="logo">
+                </a>
+                <ul class="ul"> <!-- Tag usada para representar uma lista desordenada -->
+                    <a href="../../index.html">Início</a>
+                    <a href="./sobre.html">Sobre</a>
+                    <a href="./servicos.html">Serviços</a>
+                    <a class="btn" href="./contato.html">Contato</a>
+                    <div class="close-icon">
+                        <i class="fa-solid fa-circle-xmark" onclick="menuClose()"></i>
+                    </div>
+                </ul>
+
+                <div class="menu-icon">
+                    <i class="fa-solid fa-bars" onclick="menuOpen()"></i>
+                </div>
+            </nav>
+
+            <!-- section -->
+            <section class="banner"> <!-- Tag usada para marcar seções de um página -->
+                <div class="banner-text">
+                    <h1>Serviços</h1>
+                </div>
+            </section>
+            <!-- /section -->
+        </div>
+        <!-- /container -->
+    </header>
+    <!-- /header -->
+
+    <!-- Serviços -->
+
+    <section class="servicos">
+        <div class="container">
+            <h3>Nossos serviços</h3>
+            <p>Conheça os nossos melhores serviços</p>
+
+            <!-- Rows cards -->
+            <div class="rows-cards">
+
+                <!-- row card item 1 -->
+                <div class="row-card-item">
+                    <img src="../images/cloud.png" alt="">
+                    <p class="nome-servico"><strong>Serviço em nuvem</strong></p>
+                    <p class="descricao-servico">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim vel, officia nisi hic ea non error ab ratione. Voluptatibus aut iste delectus totam nostrum impedit quis, provident nemo tempore omnis?</p>
+                </div>
+                <!-- /row card item 1 -->
+
+                <!-- row card item 2 -->
+                <div class="row-card-item">
+                    <img src="../images/digital-marketing.png" alt="">
+                    <p class="nome-servico"><strong>Marketing</strong></p>
+                    <p class="descricao-servico">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim vel, officia nisi hic ea non error ab ratione. Voluptatibus aut iste delectus totam nostrum impedit quis, provident nemo tempore omnis?</p>
+                </div>
+                <!-- /row card item 2 -->
+
+                <!-- row card item 3 -->
+                <div class="row-card-item">
+                    <img src="../images/seo.png" alt="">
+                    <p class="nome-servico"><strong>Seo</strong></p>
+                    <p class="descricao-servico">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim vel, officia nisi hic ea non error ab ratione. Voluptatibus aut iste delectus totam nostrum impedit quis, provident nemo tempore omnis?</p>
+                </div>
+                <!-- /row card item 3 -->
+
+                <!-- row card item 4 -->
+                <div class="row-card-item">
+                    <img src="../images/virtual_store.png" alt="">
+                    <p class="nome-servico"><strong>Criação de lojas virtuais</strong></p>
+                    <p class="descricao-servico">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim vel, officia nisi hic ea non error ab ratione. Voluptatibus aut iste delectus totam nostrum impedit quis, provident nemo tempore omnis?</p>
+                </div>
+                <!-- /row card item 4 -->
+
+                <!-- row card item 5 -->
+                <div class="row-card-item">
+                    <img src="../images/layer.png" alt="">
+                    <p class="nome-servico"><strong>Identidade visual e design</strong></p>
+                    <p class="descricao-servico">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim vel, officia nisi hic ea non error ab ratione. Voluptatibus aut iste delectus totam nostrum impedit quis, provident nemo tempore omnis?</p>
+                </div>
+                <!-- /row card item 5 -->
+
+                <!-- row card item 6 -->
+                <div class="row-card-item">
+                    <img src="../images/manager.png" alt="">
+                    <p class="nome-servico"><strong>Criação de conteúdo</strong></p>
+                    <p class="descricao-servico">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim vel, officia nisi hic ea non error ab ratione. Voluptatibus aut iste delectus totam nostrum impedit quis, provident nemo tempore omnis?</p>
+                </div>
+                <!-- /row card item 6 -->
+
+            </div>
+            <!-- /Rows cards -->
+        </div>
+    </section>
+
+    <!-- Dados -->
+        <section class="dados">
+            <div class="container">
+                <!-- Dados item 1 -->
+                <div class="dados-item">
+                    <img src="../images/cloud.png" alt="">
+                    <p>
+                        <strong>+360</strong>
+                        Projetos concluídos
+                    </p>
+                </div>
+                <!-- /Dados item 1 -->
+                
+                <!-- Dados item 2 -->
+                <div class="dados-item">
+                    <img src="../images/manager.png" alt="">
+                    <p>
+                        <strong>+890</strong>
+                        Clientes satisfeitos
+                    </p>
+                </div>
+                <!-- /Dados item 2 -->
+
+                <!-- Dados item 3 -->
+                <div class="dados-item">
+                    <img src="../images/trophy.png" alt="">
+                    <p>
+                        <strong>+4303</strong>
+                        Jornada de trabalho
+                    </p>
+                </div>
+                <!-- /Dados item 3 -->
+
+                <!-- Dados item 4 -->
+                <div class="dados-item">
+                    <img src="../images/layer.png" alt="">
+                    <p>
+                        <strong>+254</strong>
+                        Publicidades pagas
+                    </p>
+                </div>
+                <!-- /Dados item 4 -->
+            </div>
+        </section>
+    <!-- /Dados -->
+
+    <!-- /Serviços -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <p>Desenvolvido por Platos69</p>
+        </div>
+    </footer>
+    <!-- /footer -->
+
+    <!-- Js's -->
+    <script src="../js/main.js"></script>
+    <!-- /Js's -->
+</body>
+
+</html>
