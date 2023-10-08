@@ -1,0 +1,138 @@
+/* Fontes importadas */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* CONFIGURAÇÕES INICIAIS */
+* {
+    margin: 0; /* Espaçamento externo */
+    padding: 0; /* Espaçamento interno */
+    box-sizing: border-box; /* Altera a forma do tamanho da box */
+    text-decoration: none; /* Propriedade utilizada para alterar a decoração de links */
+    outline: none; /* Altera o contorno */
+    font-family: 'Inter', sans-serif; /* Define qual fonte será aplicada */
+}
+/* /CONFIGURAÇÕES INICIAIS */
+
+/* Natives */
+body {
+    background-color: #f1f6fc31; /* Altera a cor do fundo */
+}
+
+section, footer {
+    padding: 54px 0;
+}
+
+h3 {
+    font-size: 50px; /* Altera o tamanho da fonte */
+}
+ 
+p {
+    color: #0000009c;
+}
+
+header {
+    background-position: center; /* Configura a posição da imagem para que ela fique no centro */
+    background-size: cover; /* Configura a imagem para que ela ocupe todo o campo */
+    background-attachment: fixed; /* Configura a imagem para que ela ative um efeito "Parallax" */
+    background-repeat: no-repeat; /* Configura a imagem para que ela não fique se repetindo para preencher todo o espaço */
+}
+
+nav {
+    display: flex; /* Permite deixar os elementos do site um do lado do outro */
+    align-items: center; /* Configura para que os elementos fiquem centralizados */ 
+    justify-content: space-between; /* Adiciona um espaço igualitário entre os elementos */
+    padding: 30px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul a {
+    color: white; /* Altera a cor do texto */
+    margin: 0 25px; 
+    text-transform: uppercase; /* Altera a formatação do texto para maiúsculo */
+    font-size: 14px; /* Altera o tamanho da fonte */
+    display: block; /* Renderiza o texto como um bloco*/
+}
+
+nav ul a:not(.btn)::after { /* After cria um outro elemento após a tag */ /* Esse not() permite fazer uma restrição de onde a animação ocorrerá*/
+    content: "";
+    background: #3580db;
+    border-radius: 10px;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: auto 0;
+    transition: 0.3s;
+}
+
+nav ul a:hover::after { 
+    width: 100%;
+}
+
+/* /Natives */
+
+/* Classes */
+
+.container {
+    max-width: 1400px; /* Define a altura máxima de determinado elemento */
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.btn {
+    background-color: #4f9cf9;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px; /* Altera a curvatura da borda */
+    cursor: point; /* Altera o estilo do mouse para apontando */
+    display: inline-block; /* Alinha todos os elementos com a mesma classe na mesma linha */
+    transition: 0.5s; /* Aplica um tempo à determinada animação */
+} 
+
+.btn:hover { /* Essa tag hover configura uma animação de transição */
+    background-color: #3580db;
+}
+
+.btn.animate-btn {
+    animation: animate-outline 1s ease-out infinite;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.banner .banner-text {
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
+}
+
+.banner .banner-text h1 {
+    font-size: 96px;
+    color: white;
+}
+
+.banner .banner-text p {
+    font-size: 20px;
+    color: #ffffffb7;
+    font-style: lighter;
+    margin: 18px 0;
+}
+
+/* Classes */
+
+/* Keyframes */
+
+@keyframes animate-outline {
+    from {
+        outline: 0px solid #4f9bf98a;
+    }
+    to {
+        outline: 15px solid #4f9bf900;
+    }
+}   
+
+/* /Keyframes */
